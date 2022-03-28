@@ -1,0 +1,29 @@
+{
+  "name": "memberview",
+  "version": "1.0.0",
+  "description": "Fullstack MERN app for reviewing users",
+  "main": "app.js",
+  "scripts": {
+    "server": "nodemon server/app.js",
+    "start": "node app.js",
+    "client": "npm run start --prefix client",
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev-install": "npm install && cd client && npm install && cd ..",
+    "develop": "concurrently --kill-others-on-fail \"npm run server\" \"npm run client\""
+  },
+  "author": "Efua Akumanyi (efuaakumanyi.com)",
+  "license": "ISC",
+  "dependencies": {
+    "bcryptjs": "^2.4.3",
+    "body-parser": "^1.19.1",
+    "config": "^3.3.7",
+    "cors": "^2.8.5",
+    "express": "^4.17.2",
+    "mongoose": "^6.1.5",
+    "validation": "^0.0.1"
+  },
+  "devDependencies": {
+    "concurrently": "^7.0.0",
+    "nodemon": "^2.0.15"
+  }
+}
