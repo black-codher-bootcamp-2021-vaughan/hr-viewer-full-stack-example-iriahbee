@@ -51,6 +51,7 @@ router.put('/:id', (req, res) => {
 // @description Delete Person by id
 // @access Public
 router.delete('/:id', (req, res) => {
+  console.log("delete is working", req.params.id)
   Person.findByIdAndRemove(req.params.id, req.body)
     .then(Person => res.json({ mgs: 'Person entry deleted successfully' }))
     .catch(err => res.status(404).json({ error: 'No such a Person' }));
