@@ -7,7 +7,7 @@ const PeopleViewer = () => {
   const [people, updatePeople] = useState([]);
 
   useEffect(() => {
-    fetch('http://localhost:8080/api/people')
+    fetch('http://localhost:8090/api/people')
     .then(res => {
         if (res.status !== 200) {
           console.log('PeopleViewer problem. Status Code: ' + res.status);

@@ -16,6 +16,6 @@ app.get('/', (req, res) => res.send('Hello world!'));
 
 app.use('/api/people', people);
 
-const port = process.env.PORT || 8080;
+const port = process.env.PORT || 8090;
 
 app.listen(port, () => console.log(`App running on port http://localhost:${port}`));

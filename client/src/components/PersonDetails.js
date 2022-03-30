@@ -7,7 +7,7 @@ const PersonDetails = () => {
   let [person, setPerson] = useState();
 
   const fetchPerson = useCallback(async () => {
-    let response = await fetch('http://localhost:8080/api/people/' + id)
+    let response = await fetch('http://localhost:8090/api/people/' + id)
     response = await response.json();
     setPerson(response);
 },[id]);
@@ -17,7 +17,7 @@ const PersonDetails = () => {
   }, [fetchPerson]);
 
   function onDeleteClick (id) {
-    fetch('http://localhost:8082/api/books/'+id, {
+    fetch('http://localhost:8090/api/people/'+id, {
       method: "DELETE"
     })
       .then(res => {

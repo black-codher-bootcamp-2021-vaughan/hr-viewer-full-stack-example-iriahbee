@@ -11,10 +11,8 @@ function App() {
       <Routes>
         <Route exact path='/' element={<PersonViewer/>} />
           <Route path='/person-details/:id' element={<PersonDetails/>} />
-        {/* 
-          <Route path='/create-person' element={CreateBook} />
-          <Route path='/edit-person/:id' element={UpdateBookInfo} />
-        */}
+         {/* <Route path='/create-person' element={<CreatePerson/>} />
+          <Route path='/edit-person/:id' element={<UpdatePersonInfo/>} /> */}
       </Routes>
     </Router>
   );
